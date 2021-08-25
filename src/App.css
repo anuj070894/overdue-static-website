@@ -1,38 +1,234 @@
-.App {
-  text-align: center;
+* {
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.container-fluid-inside {
+  margin: 0;
+  padding: 0;
+}
+
+.header-outer-container {
+  background: transparent;
+  left: 0;
+  margin: 0;
+  padding: 2.5rem 7% 2rem;
+  position: fixed;
+  top: 0;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
+  width: 100vw;
+  z-index: 998;
+}
+
+.header-container {
+  -moz-box-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: -moz-box;
+  display: flex;
+  -moz-box-pack: justify;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.overdue-sticker-header {
+  height: 48px;
+  width: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-section-bg {
+  background-color: #f3f3f3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  padding-left: 0;
+  padding-right: 0;
+
+  flex-basis: 0;
+  -moz-box-flex: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.header-content-container {
+  bottom: 30vh;
+  left: 7%;
+  position: absolute;
+  width: 90%;
+}
+
+.header-text {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 4.2rem;
+}
+
+.header-content-container h1 {
+  color: #000;
+  max-width: 650px;
+}
+
+.header-content-container p {
+  color: #000;
+  padding-bottom: 2rem;
+}
+
+.header-paragraph-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.15rem;
+  color: #000;
+}
+
+.home-bottom-links-container {
+  -moz-box-align: center;
+  align-items: center;
+  /* background-color: #f3f3f3; */
+  bottom: 0;
+  display: -moz-box;
+  display: flex;
+  height: 10rem;
+  left: 0;
+  padding: 0 7%;
+  position: absolute;
+  width: 100vw;
+}
+
+.home-bottom-links-container img {
+  height: auto;
+  max-height: 12rem;
+  padding-right: 4rem;
+  width: 12rem;
+}
+
+
+.home-bottom-links-container hr {
+  background-color: #5e5e5e;
+  height: 40%;
+  margin: 0 4rem 0 0;
+  -webkit-transform: rotate(90);
+  -moz-transform: rotate(90);
+  transform: rotate(90);
+  width: 1px;
+}
+
+.home-download-links p {
+  /* margin-bottom: .8rem; */
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.home-download-links img {
+  height: 3rem;
+  max-width: 10rem;
+  padding-right: .5rem;
+  width: auto;
+}
+
+.header-content-image {
+  display: block;
+  height: 100%;
+  position: absolute;
+  /* left: 0px; */
+  right: 10%;
+  top: 0px;
+  /* width: 30%; */
+  z-index: -1;
+}
+
+@media (max-width: 1399px) {
+  .header-outer-container {
+    padding: 2.5rem 4% 2rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1399px) {
+  .header-content-container {
+    left: 4%;
+  }
+}
+
+.white-text, .white-text p {
+    color: #fff;
+}
+@media (max-width: 1399px) {
+  /* .header-text {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  } */
+
+  .header-content-image {
+    top: 5%;
+    height: 90%;
+  }
+}
+
+@media (max-width: 1056px) {
+  /* .header-text {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  } */
+
+  .header-content-image {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    right: auto;
+    top: 10%;
+    height: 60%;
+  }
+
+  .header-content-container {
+    bottom: 10vh;
+  }
+
+  .header-content-container h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+  }
+
+  .header-paragraph-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-height: 767px) {
+  .home-bottom-links-container {
+    height: 8rem;
+  }
+}
+
+@media (max-width: 1399px) {
+  .home-bottom-links-container {
+    padding: 0 4%;
   }
 }
